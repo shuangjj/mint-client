@@ -19,6 +19,29 @@ if [ "$CHAIN_ID" != "$CHAIN_ID2" ]; then
 	exit 1
 fi
 
+
+echo "******** RUNNING TEST: SendTx_$I ************"
+#missing last digit, added below
+#TODO use append properly
+START_ADDR=000000000000000000000000000000000000000
+SEND_ADDR=$START_ADDR$I
+SEND_AMT=500
+
+mintx --debug send --amt $SEND_AMT --to $SEND_ADDR --broadcast --sign --wait
+EXIT=$?
+if [ $EXIT -gt 0 ]; then
+	echo "Failed to send mint transaction"
+	exit 1
+fi
+
+#verify the send tx
+GOT_AMT=`mintinfo accounts $SEND_ADDR | jq '.balance'`
+
+if [ "$SEND_AMT" != "$GOT_AMT" ]; then
+	echo "Wrong amount. Got $GOT_AMT, expected $SEND_AMT"
+fi
+
+
 echo "******** RUNNING TEST: NameTx_$I ************"
 
 # create a namereg entry
