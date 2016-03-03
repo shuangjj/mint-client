@@ -3,8 +3,6 @@ package wire
 import (
 	"io"
 	"time"
-
-	. "github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/eris-ltd/tendermint/common"
 )
 
 /*
@@ -20,8 +18,5 @@ func WriteTime(t time.Time, w io.Writer, n *int64, err *error) {
 
 func ReadTime(r io.Reader, n *int64, err *error) time.Time {
 	t := ReadInt64(r, n, err)
-	if t%1000000 != 0 {
-		PanicSanity("Time cannot have sub-millisecond precision")
-	}
-	return time.Unix(0, t)
+	return time.Unix(0, (t/1000000)*1000000)
 }

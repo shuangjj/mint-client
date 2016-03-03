@@ -55,11 +55,14 @@ func CoreDump(dumpval bool) []byte {
 		}
 		accStorage := &AccountStorage{Address: stJ.Accounts[i].Address}
 
-		storage := merkle.NewIAVLTree(wire.BasicCodec, wire.BasicCodec, 1024, stateDB)
+		keyCounter := 0
+		storage := merkle.NewIAVLTree(wire.BasicCodec, wire.BasicCodec, 65536, stateDB)
 		storage.Load(root)
+		accStorage.Storage = make([]Storage, storage.Size())
 		storage.Iterate(func(key interface{}, value interface{}) (stopped bool) {
 			k, v := key.([]byte), value.([]byte)
-			accStorage.Storage = append(accStorage.Storage, &Storage{k, v})
+			accStorage.Storage[keyCounter] = Storage{k, v}
+			keyCounter += 1
 			return false
 		})
 		stJ.AccountsStorage = append(stJ.AccountsStorage, accStorage)
@@ -73,8 +76,11 @@ func CoreDump(dumpval bool) []byte {
 			return false
 		})
 	}
+
+	nameCounter := 0
 	// get all name entries
 	st.GetNames().Iterate(func(key interface{}, value interface{}) (stopped bool) {
+		nameCounter += 1
 		name := value.(*types.NameRegEntry)
 		stJ.NameReg = append(stJ.NameReg, name)
 		return false
@@ -89,7 +95,7 @@ func CoreDump(dumpval bool) []byte {
 	return w2.Bytes()
 }
 
-// restore state from json blob
+// resnore ()nate from json blob
 // set tendermint config before calling
 func CoreRestore(chainID string, jsonBytes []byte) {
 	var stJ State
@@ -116,10 +122,7 @@ func CoreRestore(chainID string, jsonBytes []byte) {
 	for _, accStorage := range stJ.AccountsStorage {
 		st := merkle.NewIAVLTree(wire.BasicCodec, wire.BasicCodec, 1024, stateDB)
 		for _, accSt := range accStorage.Storage {
-			set := st.Set(accSt.Key, accSt.Value)
-			if !set {
-				panic("failed to update storage tree")
-			}
+			st.Set(accSt.Key, accSt.Value)
 		}
 		// TODO: sanity check vs acc.StorageRoot
 
@@ -148,10 +151,10 @@ func CoreRestore(chainID string, jsonBytes []byte) {
 // cli wrappers
 
 func cliRestore(cmd *cobra.Command, args []string) {
-	if len(args) != 1 {
+	if len(args) != 1{
 		Exit(fmt.Errorf("Enter the chain id"))
 	}
-	chainID := args[0]
+	chainID:= args[0]
 
 	var err error
 	var b []byte
@@ -177,7 +180,6 @@ func cliRestore(cmd *cobra.Command, args []string) {
 	stateDB := dbm.GetDB("state")
 	newState := sm.LoadState(stateDB)
 	fmt.Printf("State hash: %X\n", newState.Hash())
-
 }
 
 //TODO stop node / copy issue #18
@@ -204,14 +206,14 @@ type State struct {
 	LastBondedValidators *types.ValidatorSet    `json:"last_bonded_validators"`
 	UnbondingValidators  *types.ValidatorSet    `json:"unbonding_validators"`
 	Accounts             []*acm.Account         `json:"accounts"`
-	AccountsStorage      []*AccountStorage      `json:"accounts_storage"`
+	AccountsStorage      []*AccountStorage       `json:"accounts_storage"`
 	ValidatorInfos       []*types.ValidatorInfo `json:"validator_infos"`
-	NameReg              []*types.NameRegEntry  `json:"namereg"`
+	NameReg              []*types.NameRegEntry   `json:"namereg"`
 }
 
 type AccountStorage struct {
-	Address []byte     `json:"address"`
-	Storage []*Storage `json:"storage"`
+	Address []byte    `json:"address"`
+	Storage []Storage `json:"storage"`
 }
 
 type Storage struct {
