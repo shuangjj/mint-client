@@ -3,9 +3,6 @@ package main
 import (
 	"fmt"
 	"path"
-	"runtime/pprof"
-
-	"github.com/tendermint/go-common"
 
 	. "github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/eris-ltd/common/go/common"
 	cfg "github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/eris-ltd/tendermint/config"
@@ -32,14 +29,6 @@ func init() {
 }
 
 func main() {
-	f, err := os.Create("prof.prof")
-	if err != nil {
-		Exit(err)
-	}
-	pprof.StartCPUProfile(f)
-	go common.TrapSignal(func() {
-		pprof.StopCPUProfile()
-	})
 
 	var dumpCmd = &cobra.Command{
 		Use:   "dump",
