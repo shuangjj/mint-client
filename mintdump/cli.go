@@ -120,13 +120,20 @@ func CoreRestore(chainID string, jsonBytes []byte) {
 
 	// fill the storage tree for each contract
 	for _, accStorage := range stJ.AccountsStorage {
-		st := merkle.NewIAVLTree(wire.BasicCodec, wire.BasicCodec, 1024, stateDB)
+		stor := merkle.NewIAVLTree(wire.BasicCodec, wire.BasicCodec, 1024, stateDB)
 		for _, accSt := range accStorage.Storage {
-			st.Set(accSt.Key, accSt.Value)
+			stor.Set(accSt.Key, accSt.Value)
 		}
 		// TODO: sanity check vs acc.StorageRoot
 
-		st.Save()
+		root := stor.Save()
+
+		// we need to grab the account and update its storage root
+		// because the IAVL tree depends on insert order !!!
+		_, accI := accounts.Get(accStorage.Address)
+		acc := accI.(*acm.Account)
+		acc.StorageRoot = root
+		accounts.Set(acc.Address, acc.Copy())
 	}
 
 	valInfos := merkle.NewIAVLTree(wire.BasicCodec, types.ValidatorInfoCodec, 0, stateDB)
@@ -151,10 +158,10 @@ func CoreRestore(chainID string, jsonBytes []byte) {
 // cli wrappers
 
 func cliRestore(cmd *cobra.Command, args []string) {
-	if len(args) != 1{
+	if len(args) != 1 {
 		Exit(fmt.Errorf("Enter the chain id"))
 	}
-	chainID:= args[0]
+	chainID := args[0]
 
 	var err error
 	var b []byte
@@ -206,9 +213,9 @@ type State struct {
 	LastBondedValidators *types.ValidatorSet    `json:"last_bonded_validators"`
 	UnbondingValidators  *types.ValidatorSet    `json:"unbonding_validators"`
 	Accounts             []*acm.Account         `json:"accounts"`
-	AccountsStorage      []*AccountStorage       `json:"accounts_storage"`
+	AccountsStorage      []*AccountStorage      `json:"accounts_storage"`
 	ValidatorInfos       []*types.ValidatorInfo `json:"validator_infos"`
-	NameReg              []*types.NameRegEntry   `json:"namereg"`
+	NameReg              []*types.NameRegEntry  `json:"namereg"`
 }
 
 type AccountStorage struct {
