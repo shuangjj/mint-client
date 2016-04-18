@@ -3,7 +3,7 @@ set -e
 
 # mct = mint client test
 
-cd $GOPATH/src/github.com/eris-ltd/mint-client
+cd $GOPATH/src/github.com/shuangjj/mint-client
 echo "********** BUILDING TENDERMINT ********"
 
 docker build -t mct_tendermint -f ./DOCKER/linked/DockerfileTendermint . 

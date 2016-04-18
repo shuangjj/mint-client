@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	"github.com/eris-ltd/mint-client/mintx/core"
+	"github.com/shuangjj/mint-client/mintx/core"
 
-	"github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/eris-ltd/common/go/common"
-	"github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/eris-ltd/tendermint/wire"
-	"github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/spf13/cobra"
+	"github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/shuangjj/common/go/common"
+	"github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/shuangjj/tendermint/wire"
+	"github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/spf13/cobra"
 )
 
 func cliSend(cmd *cobra.Command, args []string) {

@@ -52,19 +52,19 @@ do_installs() {
     fi
 
     # install the keys daemon for signing transactions
-    go get github.com/eris-ltd/eris-keys
+    go get github.com/shuangjj/eris-keys
 
     # install the mint-client tools
-    go get github.com/eris-ltd/mint-client/...
+    go get github.com/shuangjj/mint-client/...
 
     # install the erisdb (requires branch 0.10.3)
-    git clone https://github.com/eris-ltd/eris-db $GOPATH/src/github.com/eris-ltd/eris-db
-    cd $GOPATH/src/github.com/eris-ltd/eris-db
+    git clone https://github.com/shuangjj/eris-db $GOPATH/src/github.com/shuangjj/eris-db
+    cd $GOPATH/src/github.com/shuangjj/eris-db
     git checkout 0.10.3
     go install ./cmd/erisdb #TODO: this installs into $GOPATH/bin/erisdb - inconsistent naming convention. Everything else has eris-..
 
     # install the eris-abi tool (required for formatting transactions to contracts)
-    go get github.com/eris-ltd/eris-abi/cmd/eris-abi
+    go get github.com/shuangjj/eris-abi/cmd/eris-abi
 
     exit 0;
 }
@@ -190,7 +190,7 @@ echo $NONCE
 echo ""
 
 # some variables for the call tx
-CALLTX_TYPE=2 # each tx has a type (they can be found in github.com/eris-ltd/tendermint/types/tx.go)
+CALLTX_TYPE=2 # each tx has a type (they can be found in github.com/shuangjj/tendermint/types/tx.go)
 FEE=0
 GAS=1000
 AMOUNT=1
@@ -297,7 +297,7 @@ echo "$BLOCKHEIGHT"
 echo ""
 
 # Note we could also set up a websocket connection and subscribe to NewBlock events
-# (eg. subscribeAndWait in github.com/eris-ltd/mint-client/mintx/core/core.go )
+# (eg. subscribeAndWait in github.com/shuangjj/mint-client/mintx/core/core.go )
 
 #############################################
 ## Step 6 - Verify the contract's bytecode ##

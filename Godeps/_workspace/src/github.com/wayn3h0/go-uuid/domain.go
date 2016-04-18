@@ -1,7 +1,7 @@
 package uuid
 
 import (
-	"github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/wayn3h0/go-uuid/internal/dcesecurity"
+	"github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/wayn3h0/go-uuid/internal/dcesecurity"
 )
 
 // Domain represents the identifier for a local domain

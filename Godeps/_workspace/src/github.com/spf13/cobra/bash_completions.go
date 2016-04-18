@@ -7,7 +7,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/spf13/pflag"
+	"github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/spf13/pflag"
 )
 
 const (

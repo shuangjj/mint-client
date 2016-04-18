@@ -1,6 +1,6 @@
 
 # path in the GOPATH
-export base=github.com/eris-ltd/mint-client
+export base=github.com/shuangjj/mint-client
 
 # scripts for building containers and running dependency containers
 export build_script=DOCKER/linked/build.sh

@@ -5,8 +5,8 @@ import (
 	"os"
 	"os/user"
 
-	"github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/eris-ltd/common/go/common"
-	"github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/spf13/cobra"
+	"github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/shuangjj/common/go/common"
+	"github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/spf13/cobra"
 )
 
 var (

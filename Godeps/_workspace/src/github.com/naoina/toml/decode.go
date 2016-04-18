@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/naoina/toml/ast"
+	"github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/naoina/toml/ast"
 )
 
 const (

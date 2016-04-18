@@ -10,16 +10,16 @@ RUN apt-get update && \
   rm -rf /var/lib/apt/lists/*
 
 # set the repo and install tendermint
-ENV repo /go/src/github.com/eris-ltd/mint-client
+ENV repo /go/src/github.com/shuangjj/mint-client
 ADD . $repo
 WORKDIR $repo
 RUN go install ./...
 
 # grab eris-keys
-RUN go get github.com/eris-ltd/eris-keys
+RUN go get github.com/shuangjj/eris-keys
 
 # grab tendermint
-RUN go get github.com/eris-ltd/tendermint/cmd/tendermint
+RUN go get github.com/shuangjj/tendermint/cmd/tendermint
 ENV TMROOT /home/eris/.eris/blockchains/tendermint
 ADD $DOCKERFILES/config.toml $TMROOT/config.toml
 RUN chown -R $USER:$USER $TMROOT

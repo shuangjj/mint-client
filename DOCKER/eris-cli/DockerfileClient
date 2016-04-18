@@ -10,7 +10,7 @@ RUN apt-get update && \
   rm -rf /var/lib/apt/lists/*
 
 # set the repo and install tendermint
-ENV repo /go/src/github.com/eris-ltd/mint-client
+ENV repo /go/src/github.com/shuangjj/mint-client
 ADD . $repo
 WORKDIR $repo
 RUN go install ./...

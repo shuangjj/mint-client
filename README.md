@@ -1,6 +1,6 @@
 
-Master [![Circle CI](https://circleci.com/gh/eris-ltd/mint-client/tree/master.svg?style=svg)](https://circleci.com/gh/eris-ltd/mint-client)
- Develop [![Circle CI (develop)](https://circleci.com/gh/eris-ltd/mint-client/tree/develop.svg?style=svg)](https://circleci.com/gh/eris-ltd/mint-client)
+Master [![Circle CI](https://circleci.com/gh/shuangjj/mint-client/tree/master.svg?style=svg)](https://circleci.com/gh/shuangjj/mint-client)
+ Develop [![Circle CI (develop)](https://circleci.com/gh/shuangjj/mint-client/tree/develop.svg?style=svg)](https://circleci.com/gh/shuangjj/mint-client)
 
 # mint-client
 Command line interfaces for low-level conversations with tendermint chains
@@ -54,7 +54,7 @@ sudo apt-get install libgmp3-dev
 Now,
 
 ```
-go get github.com/eris-ltd/eris-keys
+go get github.com/shuangjj/eris-keys
 eris-keys &
 eris-keys gen
 ```

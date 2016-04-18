@@ -11,7 +11,7 @@ import (
 	"crypto/sha256"
 	"errors"
 
-	"github.com/eris-ltd/mint-client/Godeps/_workspace/src/golang.org/x/crypto/pbkdf2"
+	"github.com/shuangjj/mint-client/Godeps/_workspace/src/golang.org/x/crypto/pbkdf2"
 )
 
 const maxInt = int(^uint(0) >> 1)

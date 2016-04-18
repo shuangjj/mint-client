@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/eris-ltd/tendermint/account"
-	cclient "github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/eris-ltd/tendermint/rpc/core_client"
-	"github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/eris-ltd/tendermint/types"
+	"github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/shuangjj/tendermint/account"
+	cclient "github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/shuangjj/tendermint/rpc/core_client"
+	"github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/shuangjj/tendermint/types"
 
-	//cfg "github.com/eris-ltd/tendermint/config"
-	//tmcfg "github.com/eris-ltd/tendermint/config/tendermint"
+	//cfg "github.com/shuangjj/tendermint/config"
+	//tmcfg "github.com/shuangjj/tendermint/config/tendermint"
 )
 
 var (

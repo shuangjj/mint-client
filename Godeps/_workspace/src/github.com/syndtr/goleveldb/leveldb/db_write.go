@@ -9,9 +9,9 @@ package leveldb
 import (
 	"time"
 
-	"github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/syndtr/goleveldb/leveldb/memdb"
-	"github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/syndtr/goleveldb/leveldb/opt"
-	"github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/syndtr/goleveldb/leveldb/util"
+	"github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/syndtr/goleveldb/leveldb/memdb"
+	"github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/syndtr/goleveldb/leveldb/opt"
+	"github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/syndtr/goleveldb/leveldb/util"
 )
 
 func (db *DB) writeJournal(b *Batch) error {

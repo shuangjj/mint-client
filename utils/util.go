@@ -1,8 +1,8 @@
 package utils
 
 import (
-	cfg "github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/eris-ltd/tendermint/config"
-	tmcfg "github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/eris-ltd/tendermint/config/tendermint"
+	cfg "github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/shuangjj/tendermint/config"
+	tmcfg "github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/shuangjj/tendermint/config/tendermint"
 )
 
 func init() {

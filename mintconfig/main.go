@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/spf13/cobra"
+	"github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/spf13/cobra"
 )
 
 var (

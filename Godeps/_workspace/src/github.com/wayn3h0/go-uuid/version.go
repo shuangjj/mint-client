@@ -1,7 +1,7 @@
 package uuid
 
 import (
-	"github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/wayn3h0/go-uuid/internal/version"
+	"github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/wayn3h0/go-uuid/internal/version"
 )
 
 // Version represents the version of UUID. See page 7 in RFC 4122.

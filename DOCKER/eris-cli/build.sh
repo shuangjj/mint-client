@@ -3,7 +3,7 @@ set -e
 
 # mct = mint client test
 
-REPO=github.com/eris-ltd/mint-client
+REPO=github.com/shuangjj/mint-client
 cd $GOPATH/src/$REPO
 
 echo "********** BUILDING MINT-CLIENT ********"

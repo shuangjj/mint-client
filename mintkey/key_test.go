@@ -8,8 +8,8 @@ import (
 	"path"
 	"testing"
 
-	kstore "github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/eris-ltd/eris-keys/crypto"
-	"github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/eris-ltd/tendermint/wire"
+	kstore "github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/shuangjj/eris-keys/crypto"
+	"github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/shuangjj/tendermint/wire"
 )
 
 var keyPath string

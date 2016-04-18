@@ -1,5 +1,5 @@
 {
-	"ImportPath": "github.com/eris-ltd/mint-client",
+	"ImportPath": "github.com/shuangjj/mint-client",
 	"GoVersion": "go1.5",
 	"Packages": [
 		"./..."
@@ -20,135 +20,135 @@
 			"Rev": "71acacd42f85e5e82f70a55327789582a5200a90"
 		},
 		{
-			"ImportPath": "github.com/eris-ltd/common/go/common",
+			"ImportPath": "github.com/shuangjj/common/go/common",
 			"Rev": "26df169480eef97df7ed9f5419b7367895d077b4"
 		},
 		{
-			"ImportPath": "github.com/eris-ltd/common/go/log",
+			"ImportPath": "github.com/shuangjj/common/go/log",
 			"Rev": "26df169480eef97df7ed9f5419b7367895d077b4"
 		},
 		{
-			"ImportPath": "github.com/eris-ltd/eris-keys/crypto",
+			"ImportPath": "github.com/shuangjj/eris-keys/crypto",
 			"Rev": "4a6edda802da557a9f73f384255dc9ebc2bd9ead"
 		},
 		{
-			"ImportPath": "github.com/eris-ltd/eris-keys/crypto/ed25519",
+			"ImportPath": "github.com/shuangjj/eris-keys/crypto/ed25519",
 			"Rev": "4a6edda802da557a9f73f384255dc9ebc2bd9ead"
 		},
 		{
-			"ImportPath": "github.com/eris-ltd/eris-keys/crypto/randentropy",
+			"ImportPath": "github.com/shuangjj/eris-keys/crypto/randentropy",
 			"Rev": "4a6edda802da557a9f73f384255dc9ebc2bd9ead"
 		},
 		{
-			"ImportPath": "github.com/eris-ltd/eris-keys/crypto/secp256k1",
+			"ImportPath": "github.com/shuangjj/eris-keys/crypto/secp256k1",
 			"Rev": "4a6edda802da557a9f73f384255dc9ebc2bd9ead"
 		},
 		{
-			"ImportPath": "github.com/eris-ltd/eris-keys/crypto/sha3",
+			"ImportPath": "github.com/shuangjj/eris-keys/crypto/sha3",
 			"Rev": "4a6edda802da557a9f73f384255dc9ebc2bd9ead"
 		},
 		{
-			"ImportPath": "github.com/eris-ltd/tendermint/account",
+			"ImportPath": "github.com/shuangjj/tendermint/account",
 			"Comment": "0.1-66-g635ad92",
 			"Rev": "b0c1ee2c3ad851cf4e7b9dc95c2e65559e5d447d"
 		},
 		{
-			"ImportPath": "github.com/eris-ltd/tendermint/blockchain",
+			"ImportPath": "github.com/shuangjj/tendermint/blockchain",
 			"Comment": "0.1-66-g635ad92",
 			"Rev": "b0c1ee2c3ad851cf4e7b9dc95c2e65559e5d447d"
 		},
 		{
-			"ImportPath": "github.com/eris-ltd/tendermint/common",
+			"ImportPath": "github.com/shuangjj/tendermint/common",
 			"Comment": "0.1-66-g635ad92",
 			"Rev": "b0c1ee2c3ad851cf4e7b9dc95c2e65559e5d447d"
 		},
 		{
-			"ImportPath": "github.com/eris-ltd/tendermint/config",
+			"ImportPath": "github.com/shuangjj/tendermint/config",
 			"Comment": "0.1-66-g635ad92",
 			"Rev": "b0c1ee2c3ad851cf4e7b9dc95c2e65559e5d447d"
 		},
 		{
-			"ImportPath": "github.com/eris-ltd/tendermint/config/tendermint",
+			"ImportPath": "github.com/shuangjj/tendermint/config/tendermint",
 			"Comment": "0.1-66-g635ad92",
 			"Rev": "b0c1ee2c3ad851cf4e7b9dc95c2e65559e5d447d"
 		},
 		{
-			"ImportPath": "github.com/eris-ltd/tendermint/db",
+			"ImportPath": "github.com/shuangjj/tendermint/db",
 			"Comment": "0.1-66-g635ad92",
 			"Rev": "b0c1ee2c3ad851cf4e7b9dc95c2e65559e5d447d"
 		},
 		{
-			"ImportPath": "github.com/eris-ltd/tendermint/events",
+			"ImportPath": "github.com/shuangjj/tendermint/events",
 			"Comment": "0.1-66-g635ad92",
 			"Rev": "b0c1ee2c3ad851cf4e7b9dc95c2e65559e5d447d"
 		},
 		{
-			"ImportPath": "github.com/eris-ltd/tendermint/logger",
+			"ImportPath": "github.com/shuangjj/tendermint/logger",
 			"Comment": "0.1-66-g635ad92",
 			"Rev": "b0c1ee2c3ad851cf4e7b9dc95c2e65559e5d447d"
 		},
 		{
-			"ImportPath": "github.com/eris-ltd/tendermint/merkle",
+			"ImportPath": "github.com/shuangjj/tendermint/merkle",
 			"Comment": "0.1-66-g635ad92",
 			"Rev": "b0c1ee2c3ad851cf4e7b9dc95c2e65559e5d447d"
 		},
 		{
-			"ImportPath": "github.com/eris-ltd/tendermint/p2p",
+			"ImportPath": "github.com/shuangjj/tendermint/p2p",
 			"Comment": "0.1-66-g635ad92",
 			"Rev": "b0c1ee2c3ad851cf4e7b9dc95c2e65559e5d447d"
 		},
 		{
-			"ImportPath": "github.com/eris-ltd/tendermint/p2p/upnp",
+			"ImportPath": "github.com/shuangjj/tendermint/p2p/upnp",
 			"Comment": "0.1-66-g635ad92",
 			"Rev": "b0c1ee2c3ad851cf4e7b9dc95c2e65559e5d447d"
 		},
 		{
-			"ImportPath": "github.com/eris-ltd/tendermint/permission/types",
+			"ImportPath": "github.com/shuangjj/tendermint/permission/types",
 			"Comment": "0.1-66-g635ad92",
 			"Rev": "b0c1ee2c3ad851cf4e7b9dc95c2e65559e5d447d"
 		},
 		{
-			"ImportPath": "github.com/eris-ltd/tendermint/rpc/core/types",
+			"ImportPath": "github.com/shuangjj/tendermint/rpc/core/types",
 			"Comment": "0.1-66-g635ad92",
 			"Rev": "b0c1ee2c3ad851cf4e7b9dc95c2e65559e5d447d"
 		},
 		{
-			"ImportPath": "github.com/eris-ltd/tendermint/rpc/core_client",
+			"ImportPath": "github.com/shuangjj/tendermint/rpc/core_client",
 			"Comment": "0.1-66-g635ad92",
 			"Rev": "b0c1ee2c3ad851cf4e7b9dc95c2e65559e5d447d"
 		},
 		{
-			"ImportPath": "github.com/eris-ltd/tendermint/rpc/types",
+			"ImportPath": "github.com/shuangjj/tendermint/rpc/types",
 			"Comment": "0.1-66-g635ad92",
 			"Rev": "b0c1ee2c3ad851cf4e7b9dc95c2e65559e5d447d"
 		},
 		{
-			"ImportPath": "github.com/eris-ltd/tendermint/state",
+			"ImportPath": "github.com/shuangjj/tendermint/state",
 			"Comment": "0.1-66-g635ad92",
 			"Rev": "b0c1ee2c3ad851cf4e7b9dc95c2e65559e5d447d"
 		},
 		{
-			"ImportPath": "github.com/eris-ltd/tendermint/state/types",
+			"ImportPath": "github.com/shuangjj/tendermint/state/types",
 			"Comment": "0.1-66-g635ad92",
 			"Rev": "b0c1ee2c3ad851cf4e7b9dc95c2e65559e5d447d"
 		},
 		{
-			"ImportPath": "github.com/eris-ltd/tendermint/types",
+			"ImportPath": "github.com/shuangjj/tendermint/types",
 			"Comment": "0.1-66-g635ad92",
 			"Rev": "b0c1ee2c3ad851cf4e7b9dc95c2e65559e5d447d"
 		},
 		{
-			"ImportPath": "github.com/eris-ltd/tendermint/vm",
+			"ImportPath": "github.com/shuangjj/tendermint/vm",
 			"Comment": "0.1-66-g635ad92",
 			"Rev": "b0c1ee2c3ad851cf4e7b9dc95c2e65559e5d447d"
 		},
 		{
-			"ImportPath": "github.com/eris-ltd/tendermint/vm/sha3",
+			"ImportPath": "github.com/shuangjj/tendermint/vm/sha3",
 			"Comment": "0.1-66-g635ad92",
 			"Rev": "b0c1ee2c3ad851cf4e7b9dc95c2e65559e5d447d"
 		},
 		{
-			"ImportPath": "github.com/eris-ltd/tendermint/wire",
+			"ImportPath": "github.com/shuangjj/tendermint/wire",
 			"Comment": "0.1-66-g635ad92",
 			"Rev": "b0c1ee2c3ad851cf4e7b9dc95c2e65559e5d447d"
 		},

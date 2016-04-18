@@ -5,8 +5,8 @@ import (
 	"os"
 	"strings"
 
-	cclient "github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/eris-ltd/tendermint/rpc/core_client"
-	"github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/spf13/cobra"
+	cclient "github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/shuangjj/tendermint/rpc/core_client"
+	"github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/spf13/cobra"
 )
 
 var (

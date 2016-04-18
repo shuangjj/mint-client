@@ -9,13 +9,13 @@ import (
 	"path"
 	"testing"
 
-	cfg "github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/eris-ltd/tendermint/config"
-	dbm "github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/eris-ltd/tendermint/db"
-	ptypes "github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/eris-ltd/tendermint/permission/types"
-	sm "github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/eris-ltd/tendermint/state"
+	cfg "github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/shuangjj/tendermint/config"
+	dbm "github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/shuangjj/tendermint/db"
+	ptypes "github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/shuangjj/tendermint/permission/types"
+	sm "github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/shuangjj/tendermint/state"
 )
 
-var TestDir = path.Join(os.Getenv("GOPATH"), "src", "github.com", "eris-ltd", "mint-client", "mintdump", "test")
+var TestDir = path.Join(os.Getenv("GOPATH"), "src", "github.com", "shuangjj", "mint-client", "mintdump", "test")
 
 /*
 // XXX: Keeping leveldb files in version control is not nice ....

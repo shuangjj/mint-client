@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	kstore "github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/eris-ltd/eris-keys/crypto"
-	"github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/eris-ltd/tendermint/account"
-	"github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/eris-ltd/tendermint/wire"
-	"github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/spf13/cobra"
-	"github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/tendermint/ed25519"
-	"github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/wayn3h0/go-uuid"
+	kstore "github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/shuangjj/eris-keys/crypto"
+	"github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/shuangjj/tendermint/account"
+	"github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/shuangjj/tendermint/wire"
+	"github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/spf13/cobra"
+	"github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/tendermint/ed25519"
+	"github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/wayn3h0/go-uuid"
 )
 
 func Pubkeyer(k *kstore.Key) ([]byte, error) {

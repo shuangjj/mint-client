@@ -4,9 +4,9 @@ FROM eris/base
 ENV DOCKERFILES ./DOCKER/linked
 
 # grab tendermint
-RUN mkdir -p $GOPATH/src/github.com/eris-ltd/tendermint
-RUN git clone https://github.com/eris-ltd/tendermint $GOPATH/src/github.com/eris-ltd/tendermint
-WORKDIR $GOPATH/src/github.com/eris-ltd/tendermint
+RUN mkdir -p $GOPATH/src/github.com/shuangjj/tendermint
+RUN git clone https://github.com/shuangjj/tendermint $GOPATH/src/github.com/shuangjj/tendermint
+WORKDIR $GOPATH/src/github.com/shuangjj/tendermint
 RUN git checkout working
 RUN go install ./cmd/tendermint
 ENV TMROOT /home/eris/.eris/blockchains/tendermint

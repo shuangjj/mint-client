@@ -9,9 +9,9 @@ import (
 	"path"
 	"testing"
 
-	ptypes "github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/eris-ltd/tendermint/permission/types"
-	stypes "github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/eris-ltd/tendermint/state/types"
-	"github.com/eris-ltd/mint-client/Godeps/_workspace/src/github.com/eris-ltd/tendermint/types"
+	ptypes "github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/shuangjj/tendermint/permission/types"
+	stypes "github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/shuangjj/tendermint/state/types"
+	"github.com/shuangjj/mint-client/Godeps/_workspace/src/github.com/shuangjj/tendermint/types"
 )
 
 func MakeGenesisDocFromFile(genDocFile string) *stypes.GenesisDoc {

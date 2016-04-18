@@ -23,5 +23,5 @@ dependencies:
 test:
   override:
     - go test ./...
-    # - git clone https://github.com/eris-ltd/integration-tests $INTEGRATION_TESTS_PATH
+    # - git clone https://github.com/shuangjj/integration-tests $INTEGRATION_TESTS_PATH
     # - bash $INTEGRATION_TESTS_PATH/test.sh
